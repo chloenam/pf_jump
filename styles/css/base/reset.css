@@ -199,10 +199,11 @@
             format('svg'); /* Legacy iOS */
 }
 * {
-    font-family: 'Roboto',
+    font-family: 'Montserrat',
         'Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial',
         'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', 'Noto Sans',
         'sans-serif';
+
     box-sizing: border-box;
 }
 
