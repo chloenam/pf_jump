@@ -8,245 +8,414 @@
   overflow: hidden !important;
   clip: rect(0px, 0px, 0px, 0px) !important;
   white-space: nowrap !important;
-  border: 0px !important; }
+  border: 0px !important;
+}
 
 .header-wrap {
-  position: relative; }
-  .header-wrap .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    padding: 30px 16px;
-    z-index: 100;
-    transition: background-color 0.3s; }
-    .header-wrap .header.bg-on {
-      background-color: #fff; }
-      .header-wrap .header.bg-on .logo {
-        background: url(../../../assets/img/logo-main.png) no-repeat center/cover; }
-      .header-wrap .header.bg-on .gnb .menu-list .menu-item .menu-link {
-        color: #333; }
-    .header-wrap .header .logo {
-      width: 112px;
-      height: 112px;
-      background: url(../../../assets/img/logo-main-wh.png) no-repeat center/cover; }
-    .header-wrap .header .gnb .menu-list {
-      display: flex;
-      margin-left: 30px; }
-      .header-wrap .header .gnb .menu-list .menu-item {
-        margin: 0 26px; }
-        .header-wrap .header .gnb .menu-list .menu-item.active .menu-link {
-          font-weight: 400; }
-        .header-wrap .header .gnb .menu-list .menu-item .menu-link {
-          font-size: 20px;
-          font-weight: 300;
-          color: #fff;
-          transition: all 0.3s; }
-          .header-wrap .header .gnb .menu-list .menu-item .menu-link:hover {
-            color: rgba(255, 255, 255, 0.5); }
-  .header-wrap #mainSlider .item .item-link {
-    position: relative;
-    display: block; }
-    .header-wrap #mainSlider .item .item-link .item-img {
-      width: 100%;
-      height: 660px;
-      object-fit: cover; }
-    .header-wrap #mainSlider .item .item-link .item-txt {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      z-index: 10; }
-      .header-wrap #mainSlider .item .item-link .item-txt .sub-txt {
-        font-weight: 400;
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.8); }
-      .header-wrap #mainSlider .item .item-link .item-txt .main-txt {
-        margin-top: 16px;
-        font-size: 52px;
-        line-height: 1.2;
-        color: #fff; }
+  position: relative;
+}
+
+.header-wrap .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+
+.header-wrap .header .header-inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.header-wrap .header.bg-on {
+  background-color: #fff;
+}
+
+.header-wrap .header.bg-on .logo {
+  background: url(../../../assets/img/logo-main.png) no-repeat center/cover;
+}
+
+.header-wrap .header.bg-on .gnb .menu-list .menu-item .menu-link {
+  color: #333;
+}
+
+.header-wrap .header .logo {
+  width: 112px;
+  height: 112px;
+  background: url(../../../assets/img/logo-main-wh.png) no-repeat center/cover;
+}
+
+.header-wrap .header .gnb .menu-list {
+  display: flex;
+  margin-left: 30px;
+}
+
+.header-wrap .header .gnb .menu-list .menu-item {
+  margin: 0 26px;
+}
+
+.header-wrap .header .gnb .menu-list .menu-item.active .menu-link {
+  font-weight: 400;
+}
+
+.header-wrap .header .gnb .menu-list .menu-item .menu-link {
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.header-wrap .header .gnb .menu-list .menu-item .menu-link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-wrap #mainSlider .item .item-link {
+  position: relative;
+  display: block;
+}
+
+.header-wrap #mainSlider .item .item-link .img-wrap {
+  position: relative;
+  width: 100%;
+  height: 660px;
+  overflow: hidden;
+}
+
+.header-wrap #mainSlider .item .item-link .img-wrap .item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-wrap #mainSlider .item .item-link .item-txt {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.header-wrap #mainSlider .item .item-link .item-txt .txt-inner {
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header-wrap #mainSlider .item .item-link .item-txt .sub-txt {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header-wrap #mainSlider .item .item-link .item-txt .main-txt {
+  margin-top: 16px;
+  font-size: 52px;
+  line-height: 1.2;
+  color: #fff;
+}
 
 .main-wrap {
-  padding: 100px 0 150px; }
-  .main-wrap .content-wrap {
-    padding-left: 16px;
-    padding-right: 16px; }
-    .main-wrap .content-wrap ~ .content-wrap {
-      padding-top: 120px; }
-    .main-wrap .content-wrap .content-tit {
-      margin-bottom: 52px;
-      font-size: 38px;
-      font-weight: 500; }
-    .main-wrap .content-wrap .content .owl-carousel .item .item-txt {
-      padding: 12px 0 20px; }
-      .main-wrap .content-wrap .content .owl-carousel .item .item-txt .main-txt {
-        margin-bottom: 4px;
-        font-size: 20px; }
-      .main-wrap .content-wrap .content .owl-carousel .item .item-txt .price-txt .price-num {
-        font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
-        text-decoration: line-through; }
-      .main-wrap .content-wrap .content .owl-carousel .item .item-txt .price-txt .sale {
-        font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-        font-size: 18px;
-        font-weight: 500; }
-        .main-wrap .content-wrap .content .owl-carousel .item .item-txt .price-txt .sale.price-per {
-          color: #1e41e9; }
-    .main-wrap .content-wrap .content-link {
-      margin: 60px 0 0;
-      text-align: center; }
-      .main-wrap .content-wrap .content-link .link-more {
-        display: inline-block;
-        border: 1px solid #1e41e9;
-        padding: 16px 28px;
-        color: #1e41e9;
-        font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-        transition: all 0.3s; }
-        .main-wrap .content-wrap .content-link .link-more:hover {
-          background-color: #1e41e9;
-          color: #fff; }
-    .main-wrap .content-wrap .sort-wrap .sort-list {
-      display: flex;
-      flex-wrap: wrap; }
-      .main-wrap .content-wrap .sort-wrap .sort-list .sort-item {
-        flex: 0 0 auto;
-        margin-right: 20px;
-        margin-bottom: 20px; }
-        .main-wrap .content-wrap .sort-wrap .sort-list .sort-item:hover .sort-link {
-          background-color: #eee;
-          color: #000; }
-        .main-wrap .content-wrap .sort-wrap .sort-list .sort-item .sort-link {
-          display: block;
-          padding: 20px 40px;
-          background-color: #f4f5f6;
-          border-radius: 45px;
-          font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-          font-size: 20px;
-          color: #333;
-          transition: all 0.3s; }
-  .main-wrap .banner {
-    width: 100%;
-    margin-top: 120px;
-    padding: 40px 0;
-    background-color: #163034;
-    text-align: center; }
-    .main-wrap .banner .banner-txt {
-      font-size: 28px;
-      color: rgba(255, 255, 255, 0.8); }
-      .main-wrap .banner .banner-txt .sub {
-        padding-left: 40px;
-        font-size: 14px; }
+  padding: 100px 0 150px;
+}
+
+.main-wrap .content-wrap {
+  max-width: 1780px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.main-wrap .content-wrap ~ .content-wrap {
+  padding-top: 120px;
+}
+
+.main-wrap .content-wrap .content-tit {
+  margin-bottom: 52px;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.main-wrap .content-wrap .content .owl-carousel .item .item-txt {
+  padding: 12px 0 20px;
+}
+
+.main-wrap .content-wrap .content .owl-carousel .item .item-txt .main-txt {
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+.main-wrap .content-wrap .content .owl-carousel .item .item-txt .price-txt .price-num {
+  font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
+}
+
+.main-wrap .content-wrap .content .owl-carousel .item .item-txt .price-txt .sale {
+  font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-wrap .content-wrap .content .owl-carousel .item .item-txt .price-txt .sale.price-per {
+  color: #1e41e9;
+}
+
+.main-wrap .content-wrap .content-link {
+  margin: 60px 0 0;
+  text-align: center;
+}
+
+.main-wrap .content-wrap .content-link .link-more {
+  display: inline-block;
+  border: 1px solid #1e41e9;
+  padding: 16px 28px;
+  color: #1e41e9;
+  font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  transition: all 0.3s;
+}
+
+.main-wrap .content-wrap .content-link .link-more:hover {
+  background-color: #1e41e9;
+  color: #fff;
+}
+
+.main-wrap .content-wrap .sort-wrap .sort-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-wrap .content-wrap .sort-wrap .sort-list .sort-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.main-wrap .content-wrap .sort-wrap .sort-list .sort-item:hover .sort-link {
+  background-color: #eee;
+  color: #000;
+}
+
+.main-wrap .content-wrap .sort-wrap .sort-list .sort-item .sort-link {
+  display: block;
+  padding: 20px 40px;
+  background-color: #f4f5f6;
+  border-radius: 45px;
+  font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 20px;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.main-wrap .banner {
+  width: 100%;
+  margin-top: 120px;
+  padding: 40px 0;
+  background-color: #163034;
+  text-align: center;
+}
+
+.main-wrap .banner .banner-txt {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-wrap .banner .banner-txt .sub {
+  padding-left: 40px;
+  font-size: 14px;
+}
 
 .footer-wrap .footer {
-  position: relative;
   background-color: #000;
+}
+
+.footer-wrap .footer .footer-inner {
+  position: relative;
   display: flex;
-  padding: 40px 20px 120px; }
-  .footer-wrap .footer .gnb .menu-list {
-    margin-right: 40px; }
-    .footer-wrap .footer .gnb .menu-list .menu-item .menu-link {
-      font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-      font-size: 20px;
-      color: #fff; }
-  .footer-wrap .footer .footer-link {
-    display: flex; }
-    .footer-wrap .footer .footer-link .link-box {
-      padding: 0 40px; }
-      .footer-wrap .footer .footer-link .link-box .link-list .link-item .link {
-        font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.5); }
-  .footer-wrap .footer .footer-logo {
+  max-width: 1780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px 120px;
+}
+
+.footer-wrap .footer .gnb .menu-list {
+  margin-right: 40px;
+}
+
+.footer-wrap .footer .gnb .menu-list .menu-item .menu-link {
+  font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-wrap .footer .footer-link {
+  display: flex;
+}
+
+.footer-wrap .footer .footer-link .link-box {
+  padding: 0 40px;
+}
+
+.footer-wrap .footer .footer-link .link-box .link-list .link-item .link {
+  font-family: "Roboto", "Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, sans-serif, serif, Arial", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-wrap .footer .footer-logo {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 211px;
+}
+
+.footer-wrap .footer .footer-logo .logo-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header-wrap #mainSlider .item .item-link {
+    position: relative;
+    display: block;
+  }
+  .header-wrap #mainSlider .item .item-link .img-wrap {
+    width: 100%;
+    height: 660px;
+    overflow: hidden;
+  }
+  .header-wrap #mainSlider .item .item-link .img-wrap .item-img {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 211px; }
-    .footer-wrap .footer .footer-logo .logo-img {
-      width: 100%;
-      height: 100%;
-      display: block; }
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 @media screen and (max-width: 768px) {
   .header-wrap .header {
-    display: block;
-    padding: 10px 16px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff; }
-    .header-wrap .header .logo {
-      width: 88px;
-      height: 88px;
-      background: url(../../../assets/img/logo-main.png) no-repeat center/cover; }
-    .header-wrap .header .gnb .menu-list {
-      margin-left: 0;
-      overflow-x: scroll; }
-      .header-wrap .header .gnb .menu-list .menu-item {
-        flex: 0 0 auto;
-        margin: 0;
-        margin-right: 18px; }
-        .header-wrap .header .gnb .menu-list .menu-item.active .menu-link {
-          border-bottom: 2px solid #333; }
-        .header-wrap .header .gnb .menu-list .menu-item .menu-link {
-          color: #333;
-          font-size: 14px; }
-          .header-wrap .header .gnb .menu-list .menu-item .menu-link:hover {
-            color: inherit; }
+    background-color: #fff;
+  }
+  .header-wrap .header .header-inner {
+    display: block;
+    padding: 10px 16px;
+  }
+  .header-wrap .header .logo {
+    width: 88px;
+    height: 88px;
+    background: url(../../../assets/img/logo-main.png) no-repeat center/cover;
+  }
+  .header-wrap .header .gnb .menu-list {
+    margin-left: 0;
+    overflow-x: scroll;
+  }
+  .header-wrap .header .gnb .menu-list .menu-item {
+    flex: 0 0 auto;
+    margin: 0;
+    margin-right: 18px;
+  }
+  .header-wrap .header .gnb .menu-list .menu-item.active .menu-link {
+    border-bottom: 2px solid #333;
+  }
+  .header-wrap .header .gnb .menu-list .menu-item .menu-link {
+    color: #333;
+    font-size: 14px;
+  }
+  .header-wrap .header .gnb .menu-list .menu-item .menu-link:hover {
+    color: inherit;
+  }
   .header-wrap #mainSlider {
-    padding-top: 132px; }
-    .header-wrap #mainSlider .item .item-link .item-img {
-      height: 600px; }
-    .header-wrap #mainSlider .item .item-link .item-txt {
-      position: absolute;
-      top: 10%; }
-      .header-wrap #mainSlider .item .item-link .item-txt .main-txt {
-        font-size: 42px; }
+    padding-top: 132px;
+  }
+  .header-wrap #mainSlider .item .item-link .item-img {
+    height: 600px;
+  }
+  .header-wrap #mainSlider .item .item-link .item-txt {
+    position: absolute;
+    top: 10%;
+    left: 16px;
+    width: auto;
+  }
+  .header-wrap #mainSlider .item .item-link .item-txt .txt-inner {
+    padding: 0;
+    padding-right: 16px;
+  }
+  .header-wrap #mainSlider .item .item-link .item-txt .main-txt {
+    font-size: 42px;
+  }
   .main-wrap {
-    padding: 80px 0 120px; }
-    .main-wrap .content-wrap ~ .content-wrap {
-      padding-top: 100px; }
-    .main-wrap .content-wrap .content-tit {
-      margin-bottom: 42px;
-      font-size: 30px; }
-    .main-wrap .content-wrap .content .owl-carousel .item .item-txt .main-txt {
-      font-size: 18px; }
-    .main-wrap .content-wrap .sort-wrap .sort-list .sort-item {
-      width: calc(50% - 5px);
-      text-align: center;
-      margin-right: 10px;
-      margin-bottom: 10px; }
-      .main-wrap .content-wrap .sort-wrap .sort-list .sort-item:nth-child(2n) {
-        margin-right: 0; }
-      .main-wrap .content-wrap .sort-wrap .sort-list .sort-item:hover .sort-link {
-        background-color: #f4f5f6;
-        color: #333; }
-      .main-wrap .content-wrap .sort-wrap .sort-list .sort-item .sort-link {
-        font-size: 18px; }
-    .main-wrap .banner {
-      margin-top: 100px; }
-      .main-wrap .banner .banner-txt {
-        font-size: 20px; }
-        .main-wrap .banner .banner-txt .sub {
-          display: block;
-          padding-left: 0;
-          margin-top: 10px; }
+    padding: 80px 0 120px;
+  }
+  .main-wrap .content-wrap ~ .content-wrap {
+    padding-top: 100px;
+  }
+  .main-wrap .content-wrap .content-tit {
+    margin-bottom: 42px;
+    font-size: 30px;
+  }
+  .main-wrap .content-wrap .content .owl-carousel .item .item-txt .main-txt {
+    font-size: 18px;
+  }
+  .main-wrap .content-wrap .sort-wrap .sort-list .sort-item {
+    width: calc(50% - 5px);
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .main-wrap .content-wrap .sort-wrap .sort-list .sort-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .main-wrap .content-wrap .sort-wrap .sort-list .sort-item:hover .sort-link {
+    background-color: #f4f5f6;
+    color: #333;
+  }
+  .main-wrap .content-wrap .sort-wrap .sort-list .sort-item .sort-link {
+    font-size: 18px;
+  }
+  .main-wrap .banner {
+    margin-top: 100px;
+  }
+  .main-wrap .banner .banner-txt {
+    font-size: 20px;
+  }
+  .main-wrap .banner .banner-txt .sub {
+    display: block;
+    padding-left: 0;
+    margin-top: 10px;
+  }
   .footer-wrap .footer .gnb .menu-list {
-    margin-right: 40px; }
-    .footer-wrap .footer .gnb .menu-list .menu-item .menu-link {
-      font-size: 18px; }
+    margin-right: 40px;
+  }
+  .footer-wrap .footer .gnb .menu-list .menu-item .menu-link {
+    font-size: 18px;
+  }
   .footer-wrap .footer .footer-link {
-    display: block; }
-    .footer-wrap .footer .footer-link .link-box {
-      padding: 0 10px; }
-      .footer-wrap .footer .footer-link .link-box ~ .link-box {
-        margin-top: 20px; }
-      .footer-wrap .footer .footer-link .link-box .link-list .link-item .link {
-        font-size: 14px; }
+    display: block;
+  }
+  .footer-wrap .footer .footer-link .link-box {
+    padding: 0 10px;
+  }
+  .footer-wrap .footer .footer-link .link-box ~ .link-box {
+    margin-top: 20px;
+  }
+  .footer-wrap .footer .footer-link .link-box .link-list .link-item .link {
+    font-size: 14px;
+  }
   .footer-wrap .footer .footer-logo {
     position: absolute;
     right: 20px;
     bottom: 20px;
-    width: 140px; } }
+    width: 140px;
+  }
+}

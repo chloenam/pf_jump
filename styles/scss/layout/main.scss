@@ -24,12 +24,18 @@ $font-roboto: 'Roboto',
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        align-items: flex-start;
         width: 100%;
-        padding: 30px 16px;
         z-index: 100;
         transition: background-color 0.3s;
+
+        .header-inner {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            max-width: 1780px;
+            margin: 0 auto;
+            padding: 30px 16px;
+        }
 
         //scrollTop 660px 이상일때 bgc : #fff 적용필요
         &.bg-on {
@@ -91,16 +97,31 @@ $font-roboto: 'Roboto',
                 position: relative;
                 display: block;
 
-                .item-img {
+                .img-wrap {
+                    position: relative;
                     width: 100%;
                     height: 660px;
-                    object-fit: cover;
+                    overflow: hidden;
+
+                    .item-img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
+
                 .item-txt {
                     position: absolute;
                     top: 50%;
-                    left: 16px;
+                    left: 0;
                     z-index: 10;
+                    width: 100%;
+
+                    .txt-inner {
+                        max-width: 1780px;
+                        margin: 0 auto;
+                        padding: 0 16px;
+                    }
 
                     .sub-txt {
                         font-weight: 400;
@@ -124,6 +145,8 @@ $font-roboto: 'Roboto',
     padding: 100px 0 150px;
 
     .content-wrap {
+        max-width: 1780px;
+        margin: 0 auto;
         padding-left: 16px;
         padding-right: 16px;
 
@@ -240,10 +263,16 @@ $font-roboto: 'Roboto',
 // footer style
 .footer-wrap {
     .footer {
-        position: relative;
         background-color: #000;
-        display: flex;
-        padding: 40px 20px 120px;
+
+        .footer-inner {
+            position: relative;
+            display: flex;
+            max-width: 1780px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px 120px;
+        }
 
         .gnb {
             .menu-list {
@@ -288,16 +317,48 @@ $font-roboto: 'Roboto',
     }
 }
 
+// ie
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .header-wrap {
+        #mainSlider {
+            .item {
+                .item-link {
+                    position: relative;
+                    display: block;
+
+                    .img-wrap {
+                        width: 100%;
+                        height: 660px;
+                        overflow: hidden;
+
+                        .item-img {
+                            position: absolute;
+                            width: auto;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media-query
 @media screen and (max-width: 768px) {
     //header style
     .header-wrap {
         .header {
-            display: block;
-            padding: 10px 16px;
             position: fixed;
             top: 0;
             left: 0;
             background-color: #fff;
+
+            .header-inner {
+                display: block;
+                padding: 10px 16px;
+            }
 
             .logo {
                 width: 88px;
@@ -345,6 +406,13 @@ $font-roboto: 'Roboto',
                     .item-txt {
                         position: absolute;
                         top: 10%;
+                        left: 16px;
+                        width: auto;
+
+                        .txt-inner {
+                            padding: 0;
+                            padding-right: 16px;
+                        }
 
                         .main-txt {
                             font-size: 42px;

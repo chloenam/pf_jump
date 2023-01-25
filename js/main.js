@@ -5,7 +5,7 @@ $(document).ready(function () {
         items: 1,
         dots: false,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 10000,
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
     });
